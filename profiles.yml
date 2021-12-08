@@ -1,14 +1,1 @@
-config:
-  send_anonymous_usage_stats: false
-  partial_parse: true
-
-spotify_analytics:
-  target: default
-  outputs:
-    default:
-      type: snowflake
-      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
-      user: "{{ env_var('SNOWFLAKE_USER') }}"
-      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
-      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
-      threads: 1
+# edit this later
