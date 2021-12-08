@@ -3,4 +3,4 @@ target/
 dbt_modules/
 logs/
 
-tests/set_env_var.sh
+set_env_var.sh
