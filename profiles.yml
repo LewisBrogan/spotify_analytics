@@ -1,0 +1,9 @@
+config:
+  send_anonymous_usage_stats: false
+  partial_parse: true
+
+spotify_analytics:
+  target: default
+  outputs:
+    default:
+      type: snow
