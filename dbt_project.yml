@@ -2,7 +2,7 @@
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
-name: 'lew_dav_spotify'
+name: 'spotify'
 version: '1.0.0'
 config-version: 2
 
@@ -32,32 +32,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  spotify_analytics:
+  spotify:
     1_staging:
       +materialized: table
       +tags:
         - staging
-      lb:
-        +tags:
-          - lewis_music
     2_transformation:
       +materialized: view
       +tags:
         - transformation
-      lb:
-        +tags:
-          - lewis_music
     3_integrate:
       +materialized: view
       +tags:
         - integration
-      lb:
-        +tags:
-          - lewis_music
     4_model:
       +materialized: table
       +tags:
         - reporting
-      lb:
-        +tags:
-          - lewis_music

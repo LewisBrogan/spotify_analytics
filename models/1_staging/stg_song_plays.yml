@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_song_plays
+    columns:
+      - name: artist_id
+        description: Staged data for songs played.
+        tests:
+          - not_null
+      - name: track_id
+        description: Staged data for tracks.
+        tests:
+          - not_null
