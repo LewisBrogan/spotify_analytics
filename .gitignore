@@ -5,6 +5,4 @@ logs/
 
 set_env_var.sh
 
-python_scraper/config.py
-python_scraper/main.py
-python_scraper/util.py
+python_scraper/
