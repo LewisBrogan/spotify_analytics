@@ -16,15 +16,13 @@
 'artist_id_others',
 'track_danceability'] -%}
 
-/*
-clean the Jinja code so there is no unnecessary whitespace in the compiled sql
-*/
 with song_plays as (
 select
 {%- for col in columns -%}
-  {% if loop.first %}  {{ col }}
-    {% else %}, {{ col }}
-  {% endif %}
+{% if loop.first %} 
+    {{ col }}
+{% else %}  , {{ col }}
+{% endif %}
 {%- endfor -%}
 from {{ ref('songplays') }}
 )
