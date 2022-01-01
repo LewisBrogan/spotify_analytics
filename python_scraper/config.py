@@ -1,4 +1,0 @@
-USERNAME='teytu'
-CLIENT_ID='00b569aa91ea4d88870beeb668e2c88e'
-CLIENT_SECRET=' dd6db8b3a3e841839052a2a20fac2a7a'
-REDIRECT_URI='http://localhost:8888/'
