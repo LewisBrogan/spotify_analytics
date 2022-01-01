@@ -33,7 +33,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 models:
   spotify_analytics:
-    # Applies to all files under models/example/
     1_staging:
       +materialized: table
       +tags:
@@ -41,9 +40,6 @@ models:
       lb:
         +tags:
           - lewis_music
-      da:
-        +tags:
-          - davis_music
     2_transformation:
       +materialized: view
       +tags:
@@ -51,9 +47,6 @@ models:
       lb:
         +tags:
           - lewis_music
-      da:
-        +tags:
-          - davis_music
     3_integrate:
       +materialized: view
       +tags:
@@ -61,9 +54,6 @@ models:
       lb:
         +tags:
           - lewis_music
-      da:
-        +tags:
-          - davis_music
     4_model:
       +materialized: table
       +tags:
@@ -71,6 +61,3 @@ models:
       lb:
         +tags:
           - lewis_music
-      da:
-        +tags:
-          - davis_music
