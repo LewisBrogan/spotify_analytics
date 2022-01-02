@@ -14,14 +14,28 @@
 'artist_name_others',
 'artist_id',
 'artist_id_others',
-'track_danceability'] -%}
+'track_danceability',
+'track_energy',
+'track_key',
+'track_loudness',
+'track_mode',
+'track_speechiness',
+'track_acousticness',
+'track_instrumentalness',
+'track_liveness',
+'track_valence',
+'artist_popularity',
+'artist_followers',
+'artist_genre',
+'artist_genre_others'] -%}
 
 with song_plays as (
 select
 {%- for col in columns -%}
 {% if loop.first %} 
     {{ col }}
-{% else %}  , {{ col }}
+{% else %}
+  , {{ col }}
 {% endif %}
 {%- endfor -%}
 from {{ ref('songplays') }}
