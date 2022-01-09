@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: trn_tracks
+    description: Transformation for tracks data.
+    columns:
+      - name: track_id
+        description: Track identifier.
+        tests:
+          - not_null
+          - unique
+      - name: artist_id
+        description: Artist identifier.
+        tests:
+          - not_null
